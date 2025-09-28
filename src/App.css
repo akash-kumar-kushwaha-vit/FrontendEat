@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Outfit', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.app {
+  width: 90%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem;
+  min-height: calc(100vh - 200px); /* Ensure footer stays at bottom */
+}
+
+/* Root container styles */
+#root {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms ease, transform 300ms ease;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+  transform: scale(1.05);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 1rem 0;
+}
+
+.read-the-docs {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1200px) {
+  .app {
+    width: 95%;
+    padding: 0.5rem;
+  }
+  
+  .logo {
+    height: 5em;
+    padding: 1em;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .app {
+    width: 98%;
+    padding: 0.5rem;
+  }
+  
+  .card {
+    padding: 1.5em;
+    margin: 0.75rem 0;
+  }
+  
+  .logo {
+    height: 4.5em;
+    padding: 0.75em;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .app {
+    width: 100%;
+    padding: 0.25rem;
+  }
+  
+  #root {
+    padding: 1rem;
+  }
+  
+  .logo {
+    height: 4em;
+    padding: 0.5em;
+  }
+  
+  .card {
+    padding: 1em;
+    margin: 0.5rem 0;
+    border-radius: 8px;
+  }
+  
+  .read-the-docs {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .app {
+    padding: 0.5rem;
+  }
+  
+  #root {
+    padding: 0.5rem;
+  }
+  
+  .logo {
+    height: 3.5em;
+    padding: 0.25em;
+  }
+  
+  .card {
+    padding: 0.75em;
+    margin: 0.25rem 0;
+  }
+  
+  .read-the-docs {
+    font-size: 0.75rem;
+    text-align: center;
+  }
+}
+
+/* Tablet Landscape */
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .app {
+    width: 92%;
+    padding: 1rem;
+  }
+}
+
+/* Mobile Landscape */
+@media screen and (max-width: 896px) and (orientation: landscape) {
+  .app {
+    padding: 0.5rem;
+  }
+  
+  .logo {
+    height: 3em;
+  }
+}
+
+/* High-resolution displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .logo {
+    filter: none; /* Remove default filter for crisp rendering */
+  }
+}
+
+/* Print styles */
+@media print {
+  .app {
+    width: 100%;
+    padding: 0;
+  }
+  
+  .logo {
+    filter: none !important;
+  }
+  
+  .card {
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .logo {
+    will-change: auto;
+  }
+  
+  a:nth-of-type(2) .logo {
+    animation: none;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .card {
+    background: #2d3748;
+    color: #ffffff;
+  }
+  
+  .read-the-docs {
+    color: #a0aec0;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .card {
+    border: 2px solid currentColor;
+  }
+  
+  .logo:hover {
+    filter: drop-shadow(0 0 4px currentColor);
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .logo:hover {
+    transform: none;
+    filter: none;
+  }
+  
+  .card {
+    padding: 1.5em; /* Larger touch targets */
+  }
+}
+
+/* Very small screens */
+@media screen and (max-width: 360px) {
+  .app {
+    padding: 0.25rem;
+  }
+  
+  .logo {
+    height: 3em;
+    padding: 0.25em;
+  }
+  
+  .card {
+    padding: 0.5em;
+  }
+}
+
+/* Large screens */
+@media screen and (min-width: 1440px) {
+  .app {
+    max-width: 1400px;
+  }
+}
+
+/* Ultra-wide screens */
+@media screen and (min-width: 2000px) {
+  .app {
+    max-width: 1800px;
+  }
+  
+  .card {
+    padding: 3em;
+    margin: 2rem 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Utility classes for responsive spacing */
+.container {
+  width: 100%;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+
+/* Ensure images are responsive */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Improve button responsiveness */
+button {
+  min-height: 44px; /* Minimum touch target size */
+  min-width: 44px;
+}
+
+/* Text responsiveness */
+h1 { font-size: clamp(2rem, 5vw, 3.5rem); }
+h2 { font-size: clamp(1.5rem, 4vw, 2.5rem); }
+h3 { font-size: clamp(1.25rem, 3vw, 2rem); }
+p { font-size: clamp(1rem, 2.5vw, 1.125rem); }
