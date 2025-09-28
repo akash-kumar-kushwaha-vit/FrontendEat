@@ -8,7 +8,7 @@ const StoreContextProvider = (props) => {
   const [food_list, setFoodList] = useState([]);
   const [token, setToken] = useState("");
 
-  const url = "https://backendeatagain.vercel.app";
+  const url = "http://localhost:4000";
 
   // Fetch food list
   const fetchFoodList = async () => {
@@ -120,5 +120,6 @@ const StoreContextProvider = (props) => {
 };
 
 export default StoreContextProvider;
+
 
 
