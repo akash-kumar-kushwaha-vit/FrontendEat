@@ -8,7 +8,7 @@ const StoreContextProvider = (props) => {
   const [food_list, setFoodList] = useState([]);
   const [token, setToken] = useState("");
 
-  const url = "https://backendeatagain-3q1a.vercel.app";
+  const url = "https://food-del-backend-bter.onrender.com";
 
   // Fetch food list
   const fetchFoodList = async () => {
@@ -120,6 +120,7 @@ const StoreContextProvider = (props) => {
 };
 
 export default StoreContextProvider;
+
 
 
 
